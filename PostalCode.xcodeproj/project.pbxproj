@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		713CB9E628BA6BE500B889E0 /* CodableCSV in Frameworks */ = {isa = PBXBuildFile; productRef = 713CB9E528BA6BE500B889E0 /* CodableCSV */; };
+		713CB9E928BA6C0700B889E0 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 713CB9E828BA6C0700B889E0 /* Realm */; };
+		713CB9EB28BA6C0700B889E0 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 713CB9EA28BA6C0700B889E0 /* RealmSwift */; };
+		713CB9EF28BA6E2600B889E0 /* PostalCodesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713CB9EE28BA6E2600B889E0 /* PostalCodesRepository.swift */; };
+		713CB9F228BA6E6800B889E0 /* PostalCodesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713CB9F128BA6E6800B889E0 /* PostalCodesService.swift */; };
+		713CB9F428BA6F0500B889E0 /* PostalCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713CB9F328BA6F0500B889E0 /* PostalCode.swift */; };
+		713CB9F628BA758600B889E0 /* PostalCodesExplorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713CB9F528BA758600B889E0 /* PostalCodesExplorerViewController.swift */; };
+		713CB9F928BA7CE200B889E0 /* DBStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713CB9F828BA7CE200B889E0 /* DBStorage.swift */; };
 		71C8CD2628BA5D5E003A6245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8CD2528BA5D5E003A6245 /* AppDelegate.swift */; };
 		71C8CD2828BA5D5E003A6245 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8CD2728BA5D5E003A6245 /* SceneDelegate.swift */; };
 		71C8CD2D28BA5D5E003A6245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71C8CD2B28BA5D5E003A6245 /* Main.storyboard */; };
@@ -15,7 +23,6 @@
 		71C8CD3D28BA5D5F003A6245 /* PostalCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8CD3C28BA5D5F003A6245 /* PostalCodeTests.swift */; };
 		71C8CD4728BA5D5F003A6245 /* PostalCodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8CD4628BA5D5F003A6245 /* PostalCodeUITests.swift */; };
 		71C8CD4928BA5D5F003A6245 /* PostalCodeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8CD4828BA5D5F003A6245 /* PostalCodeUITestsLaunchTests.swift */; };
-		71C8CD5A28BA5EDC003A6245 /* PostalCodeExplorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8CD5928BA5EDC003A6245 /* PostalCodeExplorerViewController.swift */; };
 		71C8CD5C28BA5EEA003A6245 /* PostalCodeExplorerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8CD5B28BA5EEA003A6245 /* PostalCodeExplorerViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		713CB9EE28BA6E2600B889E0 /* PostalCodesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostalCodesRepository.swift; sourceTree = "<group>"; };
+		713CB9F128BA6E6800B889E0 /* PostalCodesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostalCodesService.swift; sourceTree = "<group>"; };
+		713CB9F328BA6F0500B889E0 /* PostalCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostalCode.swift; sourceTree = "<group>"; };
+		713CB9F528BA758600B889E0 /* PostalCodesExplorerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostalCodesExplorerViewController.swift; sourceTree = "<group>"; };
+		713CB9F828BA7CE200B889E0 /* DBStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBStorage.swift; sourceTree = "<group>"; };
 		71C8CD2228BA5D5E003A6245 /* PostalCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostalCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71C8CD2528BA5D5E003A6245 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71C8CD2728BA5D5E003A6245 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,7 +61,6 @@
 		71C8CD4228BA5D5F003A6245 /* PostalCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostalCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71C8CD4628BA5D5F003A6245 /* PostalCodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostalCodeUITests.swift; sourceTree = "<group>"; };
 		71C8CD4828BA5D5F003A6245 /* PostalCodeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostalCodeUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		71C8CD5928BA5EDC003A6245 /* PostalCodeExplorerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostalCodeExplorerViewController.swift; sourceTree = "<group>"; };
 		71C8CD5B28BA5EEA003A6245 /* PostalCodeExplorerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostalCodeExplorerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +69,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				713CB9EB28BA6C0700B889E0 /* RealmSwift in Frameworks */,
+				713CB9E928BA6C0700B889E0 /* Realm in Frameworks */,
+				713CB9E628BA6BE500B889E0 /* CodableCSV in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +92,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		713CB9EC28BA6DAD00B889E0 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				713CB9F328BA6F0500B889E0 /* PostalCode.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		713CB9ED28BA6DB300B889E0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				713CB9F128BA6E6800B889E0 /* PostalCodesService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		713CB9F028BA6E4600B889E0 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				713CB9EE28BA6E2600B889E0 /* PostalCodesRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		713CB9F728BA7CCC00B889E0 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				713CB9F828BA7CE200B889E0 /* DBStorage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		71C8CD1928BA5D5E003A6245 = {
 			isa = PBXGroup;
 			children = (
@@ -128,7 +174,11 @@
 		71C8CD5528BA5DCD003A6245 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				713CB9EC28BA6DAD00B889E0 /* Domain */,
 				71C8CD5828BA5DF6003A6245 /* Scenes */,
+				713CB9ED28BA6DB300B889E0 /* Network */,
+				713CB9F028BA6E4600B889E0 /* Repository */,
+				713CB9F728BA7CCC00B889E0 /* Storage */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -157,7 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				71C8CD5B28BA5EEA003A6245 /* PostalCodeExplorerViewModel.swift */,
-				71C8CD5928BA5EDC003A6245 /* PostalCodeExplorerViewController.swift */,
+				713CB9F528BA758600B889E0 /* PostalCodesExplorerViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -178,6 +228,11 @@
 			dependencies = (
 			);
 			name = PostalCode;
+			packageProductDependencies = (
+				713CB9E528BA6BE500B889E0 /* CodableCSV */,
+				713CB9E828BA6C0700B889E0 /* Realm */,
+				713CB9EA28BA6C0700B889E0 /* RealmSwift */,
+			);
 			productName = PostalCode;
 			productReference = 71C8CD2228BA5D5E003A6245 /* PostalCode.app */;
 			productType = "com.apple.product-type.application";
@@ -250,6 +305,10 @@
 				Base,
 			);
 			mainGroup = 71C8CD1928BA5D5E003A6245;
+			packageReferences = (
+				713CB9E428BA6BE500B889E0 /* XCRemoteSwiftPackageReference "CodableCSV" */,
+				713CB9E728BA6C0700B889E0 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 71C8CD2328BA5D5E003A6245 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -296,7 +355,11 @@
 				71C8CD2628BA5D5E003A6245 /* AppDelegate.swift in Sources */,
 				71C8CD5C28BA5EEA003A6245 /* PostalCodeExplorerViewModel.swift in Sources */,
 				71C8CD2828BA5D5E003A6245 /* SceneDelegate.swift in Sources */,
-				71C8CD5A28BA5EDC003A6245 /* PostalCodeExplorerViewController.swift in Sources */,
+				713CB9F428BA6F0500B889E0 /* PostalCode.swift in Sources */,
+				713CB9F628BA758600B889E0 /* PostalCodesExplorerViewController.swift in Sources */,
+				713CB9F928BA7CE200B889E0 /* DBStorage.swift in Sources */,
+				713CB9EF28BA6E2600B889E0 /* PostalCodesRepository.swift in Sources */,
+				713CB9F228BA6E6800B889E0 /* PostalCodesService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,6 +701,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		713CB9E428BA6BE500B889E0 /* XCRemoteSwiftPackageReference "CodableCSV" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dehesa/CodableCSV.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.7;
+			};
+		};
+		713CB9E728BA6C0700B889E0 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		713CB9E528BA6BE500B889E0 /* CodableCSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 713CB9E428BA6BE500B889E0 /* XCRemoteSwiftPackageReference "CodableCSV" */;
+			productName = CodableCSV;
+		};
+		713CB9E828BA6C0700B889E0 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 713CB9E728BA6C0700B889E0 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		713CB9EA28BA6C0700B889E0 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 713CB9E728BA6C0700B889E0 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 71C8CD1A28BA5D5E003A6245 /* Project object */;
 }
