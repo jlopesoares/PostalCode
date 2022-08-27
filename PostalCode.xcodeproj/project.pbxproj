@@ -1,0 +1,643 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		71C8CD2628BA5D5E003A6245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8CD2528BA5D5E003A6245 /* AppDelegate.swift */; };
+		71C8CD2828BA5D5E003A6245 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8CD2728BA5D5E003A6245 /* SceneDelegate.swift */; };
+		71C8CD2D28BA5D5E003A6245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71C8CD2B28BA5D5E003A6245 /* Main.storyboard */; };
+		71C8CD2F28BA5D5F003A6245 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71C8CD2E28BA5D5F003A6245 /* Assets.xcassets */; };
+		71C8CD3228BA5D5F003A6245 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71C8CD3028BA5D5F003A6245 /* LaunchScreen.storyboard */; };
+		71C8CD3D28BA5D5F003A6245 /* PostalCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8CD3C28BA5D5F003A6245 /* PostalCodeTests.swift */; };
+		71C8CD4728BA5D5F003A6245 /* PostalCodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8CD4628BA5D5F003A6245 /* PostalCodeUITests.swift */; };
+		71C8CD4928BA5D5F003A6245 /* PostalCodeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8CD4828BA5D5F003A6245 /* PostalCodeUITestsLaunchTests.swift */; };
+		71C8CD5A28BA5EDC003A6245 /* PostalCodeExplorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8CD5928BA5EDC003A6245 /* PostalCodeExplorerViewController.swift */; };
+		71C8CD5C28BA5EEA003A6245 /* PostalCodeExplorerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8CD5B28BA5EEA003A6245 /* PostalCodeExplorerViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		71C8CD3928BA5D5F003A6245 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 71C8CD1A28BA5D5E003A6245 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71C8CD2128BA5D5E003A6245;
+			remoteInfo = PostalCode;
+		};
+		71C8CD4328BA5D5F003A6245 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 71C8CD1A28BA5D5E003A6245 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71C8CD2128BA5D5E003A6245;
+			remoteInfo = PostalCode;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		71C8CD2228BA5D5E003A6245 /* PostalCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostalCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		71C8CD2528BA5D5E003A6245 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		71C8CD2728BA5D5E003A6245 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		71C8CD2C28BA5D5E003A6245 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		71C8CD2E28BA5D5F003A6245 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		71C8CD3128BA5D5F003A6245 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		71C8CD3328BA5D5F003A6245 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71C8CD3828BA5D5F003A6245 /* PostalCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostalCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		71C8CD3C28BA5D5F003A6245 /* PostalCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostalCodeTests.swift; sourceTree = "<group>"; };
+		71C8CD4228BA5D5F003A6245 /* PostalCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostalCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		71C8CD4628BA5D5F003A6245 /* PostalCodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostalCodeUITests.swift; sourceTree = "<group>"; };
+		71C8CD4828BA5D5F003A6245 /* PostalCodeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostalCodeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		71C8CD5928BA5EDC003A6245 /* PostalCodeExplorerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostalCodeExplorerViewController.swift; sourceTree = "<group>"; };
+		71C8CD5B28BA5EEA003A6245 /* PostalCodeExplorerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostalCodeExplorerViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		71C8CD1F28BA5D5E003A6245 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71C8CD3528BA5D5F003A6245 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71C8CD3F28BA5D5F003A6245 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		71C8CD1928BA5D5E003A6245 = {
+			isa = PBXGroup;
+			children = (
+				71C8CD2428BA5D5E003A6245 /* PostalCode */,
+				71C8CD3B28BA5D5F003A6245 /* PostalCodeTests */,
+				71C8CD4528BA5D5F003A6245 /* PostalCodeUITests */,
+				71C8CD2328BA5D5E003A6245 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		71C8CD2328BA5D5E003A6245 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				71C8CD2228BA5D5E003A6245 /* PostalCode.app */,
+				71C8CD3828BA5D5F003A6245 /* PostalCodeTests.xctest */,
+				71C8CD4228BA5D5F003A6245 /* PostalCodeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		71C8CD2428BA5D5E003A6245 /* PostalCode */ = {
+			isa = PBXGroup;
+			children = (
+				71C8CD5528BA5DCD003A6245 /* Application */,
+				71C8CD5728BA5DDD003A6245 /* Resources */,
+				71C8CD5628BA5DD8003A6245 /* SupportingFiles */,
+			);
+			path = PostalCode;
+			sourceTree = "<group>";
+		};
+		71C8CD3B28BA5D5F003A6245 /* PostalCodeTests */ = {
+			isa = PBXGroup;
+			children = (
+				71C8CD3C28BA5D5F003A6245 /* PostalCodeTests.swift */,
+			);
+			path = PostalCodeTests;
+			sourceTree = "<group>";
+		};
+		71C8CD4528BA5D5F003A6245 /* PostalCodeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				71C8CD4628BA5D5F003A6245 /* PostalCodeUITests.swift */,
+				71C8CD4828BA5D5F003A6245 /* PostalCodeUITestsLaunchTests.swift */,
+			);
+			path = PostalCodeUITests;
+			sourceTree = "<group>";
+		};
+		71C8CD5528BA5DCD003A6245 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				71C8CD5828BA5DF6003A6245 /* Scenes */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		71C8CD5628BA5DD8003A6245 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				71C8CD2528BA5D5E003A6245 /* AppDelegate.swift */,
+				71C8CD2728BA5D5E003A6245 /* SceneDelegate.swift */,
+				71C8CD3328BA5D5F003A6245 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		71C8CD5728BA5DDD003A6245 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				71C8CD2B28BA5D5E003A6245 /* Main.storyboard */,
+				71C8CD2E28BA5D5F003A6245 /* Assets.xcassets */,
+				71C8CD3028BA5D5F003A6245 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		71C8CD5828BA5DF6003A6245 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				71C8CD5B28BA5EEA003A6245 /* PostalCodeExplorerViewModel.swift */,
+				71C8CD5928BA5EDC003A6245 /* PostalCodeExplorerViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		71C8CD2128BA5D5E003A6245 /* PostalCode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71C8CD4C28BA5D5F003A6245 /* Build configuration list for PBXNativeTarget "PostalCode" */;
+			buildPhases = (
+				71C8CD1E28BA5D5E003A6245 /* Sources */,
+				71C8CD1F28BA5D5E003A6245 /* Frameworks */,
+				71C8CD2028BA5D5E003A6245 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PostalCode;
+			productName = PostalCode;
+			productReference = 71C8CD2228BA5D5E003A6245 /* PostalCode.app */;
+			productType = "com.apple.product-type.application";
+		};
+		71C8CD3728BA5D5F003A6245 /* PostalCodeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71C8CD4F28BA5D5F003A6245 /* Build configuration list for PBXNativeTarget "PostalCodeTests" */;
+			buildPhases = (
+				71C8CD3428BA5D5F003A6245 /* Sources */,
+				71C8CD3528BA5D5F003A6245 /* Frameworks */,
+				71C8CD3628BA5D5F003A6245 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				71C8CD3A28BA5D5F003A6245 /* PBXTargetDependency */,
+			);
+			name = PostalCodeTests;
+			productName = PostalCodeTests;
+			productReference = 71C8CD3828BA5D5F003A6245 /* PostalCodeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		71C8CD4128BA5D5F003A6245 /* PostalCodeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71C8CD5228BA5D5F003A6245 /* Build configuration list for PBXNativeTarget "PostalCodeUITests" */;
+			buildPhases = (
+				71C8CD3E28BA5D5F003A6245 /* Sources */,
+				71C8CD3F28BA5D5F003A6245 /* Frameworks */,
+				71C8CD4028BA5D5F003A6245 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				71C8CD4428BA5D5F003A6245 /* PBXTargetDependency */,
+			);
+			name = PostalCodeUITests;
+			productName = PostalCodeUITests;
+			productReference = 71C8CD4228BA5D5F003A6245 /* PostalCodeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		71C8CD1A28BA5D5E003A6245 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					71C8CD2128BA5D5E003A6245 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					71C8CD3728BA5D5F003A6245 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 71C8CD2128BA5D5E003A6245;
+					};
+					71C8CD4128BA5D5F003A6245 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 71C8CD2128BA5D5E003A6245;
+					};
+				};
+			};
+			buildConfigurationList = 71C8CD1D28BA5D5E003A6245 /* Build configuration list for PBXProject "PostalCode" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 71C8CD1928BA5D5E003A6245;
+			productRefGroup = 71C8CD2328BA5D5E003A6245 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				71C8CD2128BA5D5E003A6245 /* PostalCode */,
+				71C8CD3728BA5D5F003A6245 /* PostalCodeTests */,
+				71C8CD4128BA5D5F003A6245 /* PostalCodeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		71C8CD2028BA5D5E003A6245 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71C8CD3228BA5D5F003A6245 /* LaunchScreen.storyboard in Resources */,
+				71C8CD2F28BA5D5F003A6245 /* Assets.xcassets in Resources */,
+				71C8CD2D28BA5D5E003A6245 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71C8CD3628BA5D5F003A6245 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71C8CD4028BA5D5F003A6245 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		71C8CD1E28BA5D5E003A6245 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71C8CD2628BA5D5E003A6245 /* AppDelegate.swift in Sources */,
+				71C8CD5C28BA5EEA003A6245 /* PostalCodeExplorerViewModel.swift in Sources */,
+				71C8CD2828BA5D5E003A6245 /* SceneDelegate.swift in Sources */,
+				71C8CD5A28BA5EDC003A6245 /* PostalCodeExplorerViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71C8CD3428BA5D5F003A6245 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71C8CD3D28BA5D5F003A6245 /* PostalCodeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71C8CD3E28BA5D5F003A6245 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71C8CD4928BA5D5F003A6245 /* PostalCodeUITestsLaunchTests.swift in Sources */,
+				71C8CD4728BA5D5F003A6245 /* PostalCodeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		71C8CD3A28BA5D5F003A6245 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71C8CD2128BA5D5E003A6245 /* PostalCode */;
+			targetProxy = 71C8CD3928BA5D5F003A6245 /* PBXContainerItemProxy */;
+		};
+		71C8CD4428BA5D5F003A6245 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71C8CD2128BA5D5E003A6245 /* PostalCode */;
+			targetProxy = 71C8CD4328BA5D5F003A6245 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		71C8CD2B28BA5D5E003A6245 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71C8CD2C28BA5D5E003A6245 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		71C8CD3028BA5D5F003A6245 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71C8CD3128BA5D5F003A6245 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		71C8CD4A28BA5D5F003A6245 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		71C8CD4B28BA5D5F003A6245 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		71C8CD4D28BA5D5F003A6245 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WX96Q8G99E;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PostalCode/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jlopesoares.PostalCode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		71C8CD4E28BA5D5F003A6245 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WX96Q8G99E;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PostalCode/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jlopesoares.PostalCode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		71C8CD5028BA5D5F003A6245 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WX96Q8G99E;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jlopesoares.PostalCodeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PostalCode.app/PostalCode";
+			};
+			name = Debug;
+		};
+		71C8CD5128BA5D5F003A6245 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WX96Q8G99E;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jlopesoares.PostalCodeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PostalCode.app/PostalCode";
+			};
+			name = Release;
+		};
+		71C8CD5328BA5D5F003A6245 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WX96Q8G99E;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jlopesoares.PostalCodeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PostalCode;
+			};
+			name = Debug;
+		};
+		71C8CD5428BA5D5F003A6245 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WX96Q8G99E;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jlopesoares.PostalCodeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PostalCode;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		71C8CD1D28BA5D5E003A6245 /* Build configuration list for PBXProject "PostalCode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71C8CD4A28BA5D5F003A6245 /* Debug */,
+				71C8CD4B28BA5D5F003A6245 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71C8CD4C28BA5D5F003A6245 /* Build configuration list for PBXNativeTarget "PostalCode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71C8CD4D28BA5D5F003A6245 /* Debug */,
+				71C8CD4E28BA5D5F003A6245 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71C8CD4F28BA5D5F003A6245 /* Build configuration list for PBXNativeTarget "PostalCodeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71C8CD5028BA5D5F003A6245 /* Debug */,
+				71C8CD5128BA5D5F003A6245 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71C8CD5228BA5D5F003A6245 /* Build configuration list for PBXNativeTarget "PostalCodeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71C8CD5328BA5D5F003A6245 /* Debug */,
+				71C8CD5428BA5D5F003A6245 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 71C8CD1A28BA5D5E003A6245 /* Project object */;
+}
