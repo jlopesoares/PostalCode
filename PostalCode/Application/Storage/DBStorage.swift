@@ -25,7 +25,7 @@ struct DBStorage: PostalCodesRepositoryUseCase {
         print("fetch on database")
         
         guard
-            let savedPostalCodes = realm?.objects(PostalCode.self),
+            let savedPostalCodes = realm?.objects(PostalCode.self).prefix(30),
             !savedPostalCodes.isEmpty
         else {
             return nil
