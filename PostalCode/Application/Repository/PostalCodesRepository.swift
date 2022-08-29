@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 protocol PostalCodesRepositoryUseCase {
     
@@ -14,7 +15,7 @@ protocol PostalCodesRepositoryUseCase {
 }
 
 
-struct PostalCodesRepository: PostalCodesRepositoryUseCase {
+struct PostalCodesRepository {
     
     private var service: PostalCodesService
     private var database: DBStorage?
@@ -26,35 +27,43 @@ struct PostalCodesRepository: PostalCodesRepositoryUseCase {
     }
     
     func fetchPostalCodes() -> [PostalCode]? {
+        
         print("Check fetchPostalCodes on repository")
         guard
             let database = database,
             let postalCodes = database.fetchPostalCodes()
         else {
-            downloadPostalCodes()
             return nil
         }
         
         return postalCodes
     }
     
-    func search(for searchTerm: String) -> [PostalCode] {
-        []
+    func searchBy(text: String, completed: @escaping ([PostalCode]?) -> Void) {
+        
+        database?.searchBy(text: text, completed: { postalCodes in
+            completed(postalCodes)
+        })
     }
     
     
-    func downloadPostalCodes() {
+    /// Function that downloads and saves the downloaded Postal Codes
+    func downloadPostalCodes(completion: @escaping (Result<Void, Error>) -> ()) {
+        
         print("Start downloadPostalCodes")
         
         Task {
-            let postalCodes = await service.getPostalCodes()
+            let postalCodes = await service.downloadPostalCodes()
             
             switch postalCodes {
             case .success(let downloadedPostalCodes):
-                database?.save(downloadedPostalCodes)
+                
+                database?.save(downloadedPostalCodes, completion: {
+                    completion(.success(()))
+                })
                 
             case .failure(let error):
-                print("error")
+                completion(.failure(error))
                 break
             }
         }

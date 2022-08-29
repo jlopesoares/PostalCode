@@ -25,6 +25,14 @@ class PostalCode: Object, Codable {
         super.init()
     }
     
+    init(local: String, codPostal: String, extCodPostal: String) {
+        super.init()
+        
+        self.local = local
+        self.codPostal = codPostal
+        self.extCodPostal = extCodPostal
+    }
+    
     required init(from decoder: Decoder) throws {
         
         let values = try decoder.container(keyedBy: CodingKeys.self)

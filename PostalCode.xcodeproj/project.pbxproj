@@ -15,6 +15,8 @@
 		713CB9F428BA6F0500B889E0 /* PostalCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713CB9F328BA6F0500B889E0 /* PostalCode.swift */; };
 		713CB9F628BA758600B889E0 /* PostalCodesExplorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713CB9F528BA758600B889E0 /* PostalCodesExplorerViewController.swift */; };
 		713CB9F928BA7CE200B889E0 /* DBStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713CB9F828BA7CE200B889E0 /* DBStorage.swift */; };
+		713CB9FC28BAE20600B889E0 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713CB9FB28BAE20600B889E0 /* UIViewController+Extensions.swift */; };
+		718963EB28BCA9F700B99850 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718963EA28BCA9F700B99850 /* LoaderViewController.swift */; };
 		71C8CD2628BA5D5E003A6245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8CD2528BA5D5E003A6245 /* AppDelegate.swift */; };
 		71C8CD2828BA5D5E003A6245 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8CD2728BA5D5E003A6245 /* SceneDelegate.swift */; };
 		71C8CD2D28BA5D5E003A6245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71C8CD2B28BA5D5E003A6245 /* Main.storyboard */; };
@@ -49,6 +51,8 @@
 		713CB9F328BA6F0500B889E0 /* PostalCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostalCode.swift; sourceTree = "<group>"; };
 		713CB9F528BA758600B889E0 /* PostalCodesExplorerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostalCodesExplorerViewController.swift; sourceTree = "<group>"; };
 		713CB9F828BA7CE200B889E0 /* DBStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBStorage.swift; sourceTree = "<group>"; };
+		713CB9FB28BAE20600B889E0 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		718963EA28BCA9F700B99850 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
 		71C8CD2228BA5D5E003A6245 /* PostalCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostalCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71C8CD2528BA5D5E003A6245 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71C8CD2728BA5D5E003A6245 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +128,31 @@
 			path = Storage;
 			sourceTree = "<group>";
 		};
+		713CB9FA28BAE1F100B889E0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				713CB9FB28BAE20600B889E0 /* UIViewController+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		718963E828BCA9D700B99850 /* Explorer */ = {
+			isa = PBXGroup;
+			children = (
+				71C8CD5B28BA5EEA003A6245 /* PostalCodeExplorerViewModel.swift */,
+				713CB9F528BA758600B889E0 /* PostalCodesExplorerViewController.swift */,
+			);
+			path = Explorer;
+			sourceTree = "<group>";
+		};
+		718963E928BCA9E000B99850 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				718963EA28BCA9F700B99850 /* LoaderViewController.swift */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
 		71C8CD1928BA5D5E003A6245 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +203,7 @@
 		71C8CD5528BA5DCD003A6245 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				713CB9FA28BAE1F100B889E0 /* Extensions */,
 				713CB9EC28BA6DAD00B889E0 /* Domain */,
 				71C8CD5828BA5DF6003A6245 /* Scenes */,
 				713CB9ED28BA6DB300B889E0 /* Network */,
@@ -206,8 +236,8 @@
 		71C8CD5828BA5DF6003A6245 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				71C8CD5B28BA5EEA003A6245 /* PostalCodeExplorerViewModel.swift */,
-				713CB9F528BA758600B889E0 /* PostalCodesExplorerViewController.swift */,
+				718963E928BCA9E000B99850 /* Loader */,
+				718963E828BCA9D700B99850 /* Explorer */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -356,6 +386,8 @@
 				71C8CD5C28BA5EEA003A6245 /* PostalCodeExplorerViewModel.swift in Sources */,
 				71C8CD2828BA5D5E003A6245 /* SceneDelegate.swift in Sources */,
 				713CB9F428BA6F0500B889E0 /* PostalCode.swift in Sources */,
+				713CB9FC28BAE20600B889E0 /* UIViewController+Extensions.swift in Sources */,
+				718963EB28BCA9F700B99850 /* LoaderViewController.swift in Sources */,
 				713CB9F628BA758600B889E0 /* PostalCodesExplorerViewController.swift in Sources */,
 				713CB9F928BA7CE200B889E0 /* DBStorage.swift in Sources */,
 				713CB9EF28BA6E2600B889E0 /* PostalCodesRepository.swift in Sources */,

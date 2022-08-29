@@ -23,14 +23,13 @@ final class PostalCodesService {
         csvDecoder = CSVDecoder(configuration: decoderConfigurations)
     }
     
-    func getPostalCodes() async -> Result<[PostalCode], Error> {
+    func downloadPostalCodes() async -> Result<[PostalCode], Error> {
 
         guard let postalCodesURL = URL(string: "https://raw.githubusercontent.com/centraldedados/codigos_postais/master/data/codigos_postais.csv") else {
-            return .success([])
+            return .failure(PostalCodeErrors.invalidUrl)
         }
         
         do {
-            
             let (data, response) = try await URLSession.shared.data(from: postalCodesURL)
             let postalCodes = try csvDecoder.decode([PostalCode].self, from: data)
             
@@ -51,5 +50,6 @@ final class PostalCodesService {
 }
 
 enum PostalCodeErrors: Error {
-    case failedToDownloadPostalCodes
+    case invalidUrl,
+    failedToDownloadPostalCodes
 }
