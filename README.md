@@ -7,7 +7,7 @@ Simple app develop to download and search Portuguese Postal Codes.
 ## To Run
 
  1. Open PostalCode.xcodeproj
- 2. Wait for the download of Swift Package Dependencies
+ 2. Wait for the download of Swift Package Dependencies and files processing stage
  3. Run the project on simulator or device
 
 ## Notes
