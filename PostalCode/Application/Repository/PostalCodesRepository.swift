@@ -8,47 +8,44 @@
 import Foundation
 import RealmSwift
 
-protocol PostalCodesRepositoryUseCase {
-    
-    func fetchPostalCodes() -> [PostalCode]?
-    func search(for searchTerm: String) -> [PostalCode]
-}
-
-
 struct PostalCodesRepository {
     
     private var service: PostalCodesService
-    private var database: DBStorage?
+    private var database = DatabaseManager()
     
     
     init(service: PostalCodesService) {
         self.service = service
-        self.database = DBStorage()
     }
     
-    func fetchPostalCodes() -> [PostalCode]? {
+    func fetchPostalCodes() -> [PostalCodes]? {
         
         print("Check fetchPostalCodes on repository")
-        guard
-            let database = database,
-            let postalCodes = database.fetchPostalCodes()
-        else {
+        
+        let savedPostalCodes = database.fetchAllPostalCodes()
+
+        if savedPostalCodes.isEmpty {
             return nil
         }
         
-        return postalCodes
+        return savedPostalCodes
     }
     
-    func searchBy(text: String, completed: @escaping ([PostalCode]?) -> Void) {
+    
+    /// Function thar starts the filtering process
+    /// - Parameters:
+    ///   - text: Text to filter
+    ///   - completed: filtered Postal Codes
+    func filterBy(text: String, completed: @escaping ([PostalCodes]?) -> Void) {
+        print("Start Filtering by \(text)")
         
-        database?.searchBy(text: text, completed: { postalCodes in
-            completed(postalCodes)
+        database.filterPostalCodes(with: text, completion: { codes in
+            completed(codes)
         })
     }
     
-    
     /// Function that downloads and saves the downloaded Postal Codes
-    func downloadPostalCodes(completion: @escaping (Result<Void, Error>) -> ()) {
+    func downloadPostalCodes(completion: @escaping (Result<Bool, Error>) -> ()) {
         
         print("Start downloadPostalCodes")
         
@@ -57,14 +54,13 @@ struct PostalCodesRepository {
             
             switch postalCodes {
             case .success(let downloadedPostalCodes):
-                
-                database?.save(downloadedPostalCodes, completion: {
-                    completion(.success(()))
-                })
+    
+                let databaseCreated = database.createDB(from: downloadedPostalCodes)
+                completion(.success(databaseCreated))
                 
             case .failure(let error):
+                
                 completion(.failure(error))
-                break
             }
         }
     }

@@ -19,6 +19,45 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0Uh-ex-D5d">
                                 <rect key="frame" x="0.0" y="95" width="414" height="767"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostalCodeTableViewCell" id="mXe-G7-kLr" customClass="PostalCodeTableViewCell" customModule="PostalCode" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="63.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mXe-G7-kLr" id="D8I-pM-bTj">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="63.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ecf-8c-xg8">
+                                                    <rect key="frame" x="8" y="8" width="398" height="47.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOI-VD-a4g">
+                                                            <rect key="frame" x="0.0" y="0.0" width="398" height="20"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ue-ny-1e5">
+                                                            <rect key="frame" x="0.0" y="28" width="398" height="19.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ecf-8c-xg8" firstAttribute="leading" secondItem="D8I-pM-bTj" secondAttribute="leading" constant="8" id="IHV-iB-org"/>
+                                                <constraint firstAttribute="bottom" secondItem="ecf-8c-xg8" secondAttribute="bottom" constant="8" id="K76-Pc-EBf"/>
+                                                <constraint firstItem="ecf-8c-xg8" firstAttribute="top" secondItem="D8I-pM-bTj" secondAttribute="top" constant="8" id="LhY-2j-t1F"/>
+                                                <constraint firstAttribute="trailing" secondItem="ecf-8c-xg8" secondAttribute="trailing" constant="8" id="n4U-pU-n9S"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="fullPostalCodeLabel" destination="TOI-VD-a4g" id="aPb-zW-8g3"/>
+                                            <outlet property="locationLabel" destination="0Ue-ny-1e5" id="hJB-d9-OVd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="pLQ-f6-4MO">
                                 <rect key="frame" x="0.0" y="44" width="414" height="51"/>

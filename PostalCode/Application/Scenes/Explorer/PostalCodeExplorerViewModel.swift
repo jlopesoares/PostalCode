@@ -21,7 +21,7 @@ final class PostalCodesExplorerViewModel {
     private var state: PostCodesExplorerState = .firstFetch
     private var repository: PostalCodesRepository
     
-    @Published var datasource: [PostalCode] = []
+    @Published var datasource: [PostalCodes] = []
     
     init(repository: PostalCodesRepository) {
         self.repository = repository
@@ -37,7 +37,7 @@ extension PostalCodesExplorerViewModel {
     
     /// Fetch Already saved Postal Codes
     /// - Returns: Returns current values if already exists
-    func fetchPostalCodes() -> [PostalCode]?{
+    func fetchPostalCodes() -> [PostalCodes]?{
         print("Start Fetching")
         
         guard let availablePostalCodes = repository.fetchPostalCodes() else {
@@ -50,12 +50,12 @@ extension PostalCodesExplorerViewModel {
         return availablePostalCodes
     }
     
-    
     /// Search function to filter Postal Codes saved
     /// - Parameter searchTerm: search term to filter
-    func search(for searchTerm: String) async {
+    func search(for searchTerm: String) {
         
-        repository.searchBy(text: searchTerm) { postalCode in
+        repository.filterBy(text: searchTerm) { postalCode in
+            print("Finish filter")
             self.datasource = postalCode ?? []
         }
     }

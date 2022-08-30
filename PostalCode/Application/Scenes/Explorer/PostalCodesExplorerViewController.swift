@@ -24,12 +24,13 @@ class PostalCodesExplorerViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
+            tableView.dataSource = self
             tableView.keyboardDismissMode = .onDrag
+            
         }
     }
     
     //MARK: - Vars
-    var tableViewDataSource: UITableViewDiffableDataSource<UUID, PostalCode>!
     let viewModel = PostalCodesExplorerViewModel(repository: PostalCodesRepository(service: PostalCodesService()))
     var cancellables: [AnyCancellable] = []
     
@@ -37,7 +38,6 @@ class PostalCodesExplorerViewController: UIViewController {
         super.viewDidLoad()
         
         bindViewModel()
-        setupPostalCodeCellProvider()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -64,63 +64,51 @@ class PostalCodesExplorerViewController: UIViewController {
         
         viewModel.downloadPostalCodes { [weak self] result in
             
-            self?.dismissLoaderViewController(completion: {
+            DispatchQueue.main.async {
                 
-                if case .failure = result {
-                    
-                    DispatchQueue.main.async {
+                self?.dismissLoaderViewController(completion: {
+                    if case .failure = result {
+                        
                         self?.presentAlerController()
+                        return
                     }
-                    return
-                }
-            })
+                })
+            }
         }
     }
     
     /// Databinding between datasource and view
     /// Refresh the Ui when new values are available
     func bindViewModel() {
-        
+
         viewModel.$datasource
             .receive(on: DispatchQueue.main)
             .sink { _ in
-                
-                self.setSnapshot()
-                
+
+                self.tableView.reloadData()
+
             }.store(in: &cancellables)
     }
 }
 
 //MARK: - TableView
-extension PostalCodesExplorerViewController {
+extension PostalCodesExplorerViewController: UITableViewDataSource {
     
-    /// Basic Cell with the DiffableDasource
-    /// For this simple example I decided to not create a custom cell since it was unnecessary
-    func setupPostalCodeCellProvider() {
-        
-        tableViewDataSource = UITableViewDiffableDataSource(tableView: tableView, cellProvider: { tableView, indexPath, postalCode in
-            
-            let cell = UITableViewCell(style: .default, reuseIdentifier: Constants.cellIdentifier)
-            
-            var content = cell.defaultContentConfiguration()
-            content.text = "\(postalCode.codPostal)-\(postalCode.extCodPostal)"
-            content.secondaryText = postalCode.local
-            
-            cell.contentConfiguration = content
-            
-            return cell
-        })
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.datasource.count
     }
-    
-    func setSnapshot() {
-        var snapshot = NSDiffableDataSourceSnapshot<UUID, PostalCode>()
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: PostalCodeTableViewCell.self),
+                                                       for: indexPath) as? PostalCodeTableViewCell else {
+            return UITableViewCell()
+        }
         
-        let section = UUID()
-        snapshot.appendSections([section])
-        snapshot.appendItems(viewModel.datasource,
-                             toSection: section)
+        let postalCode = self.viewModel.datasource[indexPath.row]
+        cell.setup(postalCode: postalCode)
         
-        tableViewDataSource.apply(snapshot, animatingDifferences: true)
+        return cell
     }
 }
 
@@ -129,12 +117,9 @@ extension PostalCodesExplorerViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        Task {
-            await self.viewModel.search(for: searchText)
-        }
+        viewModel.search(for: searchText)
     }
 }
-
 
 //MARK: - Navigation
 extension PostalCodesExplorerViewController {
@@ -166,12 +151,9 @@ extension PostalCodesExplorerViewController {
 
 private struct Constants {
     
-    static var cellIdentifier = "cell"
     static var searchBarPlaceholder = "Search for any location"
     static var cancelActionTitle = "Cancel"
     static var tryAgainActionTitle = "Try again"
     static var errorMessageTitle = "Ops..."
     static var errorMessageDescription = "Something went wrong..."
-    
-    
 }

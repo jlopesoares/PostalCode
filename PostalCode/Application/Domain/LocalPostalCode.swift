@@ -6,31 +6,17 @@
 //
 
 import Foundation
-import RealmSwift
 
-class PostalCode: Object, Codable {
+class LocalPostalCode: Codable {
     
-    @Persisted var local: String = ""
-    @Persisted var codPostal: String
-    @Persisted var extCodPostal: String = ""
+    var local: String = ""
+    var codPostal: String
+    var extCodPostal: String = ""
 
     enum CodingKeys: String, CodingKey {
         case local = "nome_localidade"
         case codPostal = "num_cod_postal"
         case extCodPostal = "ext_cod_postal"
-
-    }
-    
-    override init() {
-        super.init()
-    }
-    
-    init(local: String, codPostal: String, extCodPostal: String) {
-        super.init()
-        
-        self.local = local
-        self.codPostal = codPostal
-        self.extCodPostal = extCodPostal
     }
     
     required init(from decoder: Decoder) throws {
