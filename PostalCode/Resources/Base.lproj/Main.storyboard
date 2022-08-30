@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0Uh-ex-D5d">
-                                <rect key="frame" x="0.0" y="95" width="414" height="767"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0Uh-ex-D5d">
+                                <rect key="frame" x="0.0" y="95" width="414" height="801"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostalCodeTableViewCell" id="mXe-G7-kLr" customClass="PostalCodeTableViewCell" customModule="PostalCode" customModuleProvider="target">
@@ -67,7 +67,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0Uh-ex-D5d" secondAttribute="bottom" id="4G8-5z-Qoy"/>
+                            <constraint firstAttribute="bottom" secondItem="0Uh-ex-D5d" secondAttribute="bottom" id="4G8-5z-Qoy"/>
                             <constraint firstItem="pLQ-f6-4MO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CzN-hu-js8"/>
                             <constraint firstItem="0Uh-ex-D5d" firstAttribute="top" secondItem="pLQ-f6-4MO" secondAttribute="bottom" id="GLT-7e-cuQ"/>
                             <constraint firstItem="0Uh-ex-D5d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MSO-DU-xWC"/>
@@ -79,6 +79,7 @@
                     <connections>
                         <outlet property="searchBar" destination="pLQ-f6-4MO" id="iB6-g8-Szi"/>
                         <outlet property="tableView" destination="0Uh-ex-D5d" id="gil-ca-Ziy"/>
+                        <outlet property="tableViewBottomMarginConstraint" destination="4G8-5z-Qoy" id="N7L-Zm-L3z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

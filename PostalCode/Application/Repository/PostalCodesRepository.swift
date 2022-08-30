@@ -6,18 +6,18 @@
 //
 
 import Foundation
-import RealmSwift
 
 struct PostalCodesRepository {
     
     private var service: PostalCodesService
     private var database = DatabaseManager()
     
-    
     init(service: PostalCodesService) {
         self.service = service
     }
     
+    /// This function will fetch all the saved postal codes
+    /// - Returns: Array of saved postal codes
     func fetchPostalCodes() -> [PostalCodes]? {
         
         print("Check fetchPostalCodes on repository")
@@ -31,21 +31,19 @@ struct PostalCodesRepository {
         return savedPostalCodes
     }
     
-    
     /// Function thar starts the filtering process
     /// - Parameters:
     ///   - text: Text to filter
     ///   - completed: filtered Postal Codes
     func filterBy(text: String, completed: @escaping ([PostalCodes]?) -> Void) {
-        print("Start Filtering by \(text)")
-        
+ 
         database.filterPostalCodes(with: text, completion: { codes in
             completed(codes)
         })
     }
     
     /// Function that downloads and saves the downloaded Postal Codes
-    func downloadPostalCodes(completion: @escaping (Result<Bool, Error>) -> ()) {
+    func downloadPostalCodes(completion: @escaping (Result<Void, Error>) -> ()) {
         
         print("Start downloadPostalCodes")
         
@@ -55,8 +53,8 @@ struct PostalCodesRepository {
             switch postalCodes {
             case .success(let downloadedPostalCodes):
     
-                let databaseCreated = database.createDB(from: downloadedPostalCodes)
-                completion(.success(databaseCreated))
+                database.createDB(from: downloadedPostalCodes)
+                completion(.success(()))
                 
             case .failure(let error):
                 

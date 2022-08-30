@@ -12,7 +12,7 @@ class LoaderViewController: UIViewController {
 
     @IBOutlet weak var loaderLabel: UILabel! {
         didSet {
-            loaderLabel.text = "Loading your available postCodes"
+            loaderLabel.text = "Loading your available Postal Codes"
         }
     }
     

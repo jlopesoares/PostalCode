@@ -11,9 +11,15 @@ extension UIViewController {
 
     func getLoaderViewController() -> UIViewController {
         
-        let viewController = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "LoaderViewController")
+        let viewController = UIStoryboard(name: Constants.mainStoryboardIdentifier, bundle: .main).instantiateViewController(withIdentifier: Constants.loaderViewControllerIdentifier)
         viewController.modalPresentationStyle = .fullScreen
         
         return viewController
     }
+}
+
+private struct Constants {
+    
+    static let mainStoryboardIdentifier = "Main"
+    static let loaderViewControllerIdentifier = "LoaderViewController"
 }

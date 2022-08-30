@@ -9,6 +9,8 @@ import UIKit
 import Combine
 
 class PostalCodesExplorerViewController: UIViewController {
+   
+    @IBOutlet weak var tableViewBottomMarginConstraint: NSLayoutConstraint!
     
     //MARK: - Outlets
     lazy var loaderViewController: UIViewController = {
@@ -25,8 +27,7 @@ class PostalCodesExplorerViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.dataSource = self
-            tableView.keyboardDismissMode = .onDrag
-            
+//            tableView.keyboardDismissMode = .onDrag
         }
     }
     
@@ -34,10 +35,15 @@ class PostalCodesExplorerViewController: UIViewController {
     let viewModel = PostalCodesExplorerViewModel(repository: PostalCodesRepository(service: PostalCodesService()))
     var cancellables: [AnyCancellable] = []
     
+    deinit {
+        removeKeyboardObservers()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         bindViewModel()
+        observeKeyboardNotifications()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -58,6 +64,8 @@ class PostalCodesExplorerViewController: UIViewController {
         }
     }
     
+    /// This function will start the download process
+    /// It will show a loader screen and then remove when finished
     func downloadPostalCodes() {
         
         presentLoaderView()
@@ -83,10 +91,10 @@ class PostalCodesExplorerViewController: UIViewController {
 
         viewModel.$datasource
             .receive(on: DispatchQueue.main)
-            .sink { _ in
-
-                self.tableView.reloadData()
-
+            .sink { [weak self] _ in
+                
+                self?.tableView.reloadData()
+                
             }.store(in: &cancellables)
     }
 }
@@ -119,6 +127,10 @@ extension PostalCodesExplorerViewController: UISearchBarDelegate {
         
         viewModel.search(for: searchText)
     }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
 }
 
 //MARK: - Navigation
@@ -146,6 +158,39 @@ extension PostalCodesExplorerViewController {
         alertController.addAction(retryAction)
         
         present(alertController, animated: true)
+    }
+}
+
+//MARK: - Observers
+extension PostalCodesExplorerViewController {
+    
+    
+    fileprivate func removeKeyboardObservers() {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+    }
+    
+    fileprivate func observeKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHide),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil)
+    }
+    
+    @objc func keyboardWillShow(_ notification: Notification) {
+        
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            self.tableViewBottomMarginConstraint.constant = keyboardSize.height
+        }
+    }
+    
+    @objc func keyboardWillHide(_ notification: Notification) {
+        self.tableViewBottomMarginConstraint.constant = 0
     }
 }
 

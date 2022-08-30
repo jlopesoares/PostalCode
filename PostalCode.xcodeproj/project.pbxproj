@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		713CB9E628BA6BE500B889E0 /* CodableCSV in Frameworks */ = {isa = PBXBuildFile; productRef = 713CB9E528BA6BE500B889E0 /* CodableCSV */; };
-		713CB9E928BA6C0700B889E0 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 713CB9E828BA6C0700B889E0 /* Realm */; };
-		713CB9EB28BA6C0700B889E0 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 713CB9EA28BA6C0700B889E0 /* RealmSwift */; };
 		713CB9EF28BA6E2600B889E0 /* PostalCodesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713CB9EE28BA6E2600B889E0 /* PostalCodesRepository.swift */; };
 		713CB9F228BA6E6800B889E0 /* PostalCodesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713CB9F128BA6E6800B889E0 /* PostalCodesService.swift */; };
 		713CB9F428BA6F0500B889E0 /* LocalPostalCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713CB9F328BA6F0500B889E0 /* LocalPostalCode.swift */; };
@@ -77,8 +75,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				713CB9EB28BA6C0700B889E0 /* RealmSwift in Frameworks */,
-				713CB9E928BA6C0700B889E0 /* Realm in Frameworks */,
 				713CB9E628BA6BE500B889E0 /* CodableCSV in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,8 +270,6 @@
 			name = PostalCode;
 			packageProductDependencies = (
 				713CB9E528BA6BE500B889E0 /* CodableCSV */,
-				713CB9E828BA6C0700B889E0 /* Realm */,
-				713CB9EA28BA6C0700B889E0 /* RealmSwift */,
 			);
 			productName = PostalCode;
 			productReference = 71C8CD2228BA5D5E003A6245 /* PostalCode.app */;
@@ -351,7 +345,6 @@
 			mainGroup = 71C8CD1928BA5D5E003A6245;
 			packageReferences = (
 				713CB9E428BA6BE500B889E0 /* XCRemoteSwiftPackageReference "CodableCSV" */,
-				713CB9E728BA6C0700B889E0 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 71C8CD2328BA5D5E003A6245 /* Products */;
 			projectDirPath = "";
@@ -601,7 +594,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -629,7 +622,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -759,14 +752,6 @@
 				minimumVersion = 0.6.7;
 			};
 		};
-		713CB9E728BA6C0700B889E0 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -774,16 +759,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 713CB9E428BA6BE500B889E0 /* XCRemoteSwiftPackageReference "CodableCSV" */;
 			productName = CodableCSV;
-		};
-		713CB9E828BA6C0700B889E0 /* Realm */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 713CB9E728BA6C0700B889E0 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = Realm;
-		};
-		713CB9EA28BA6C0700B889E0 /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 713CB9E728BA6C0700B889E0 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 

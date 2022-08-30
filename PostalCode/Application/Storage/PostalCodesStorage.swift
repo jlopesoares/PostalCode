@@ -45,9 +45,9 @@ extension DatabaseManager {
     
     /// Saves the entire database
     /// - Parameters:
-    ///   - downloadedPostalCodes: Array of postals to convert and save
+    ///   - downloadedPostalCodes: Array of postals to convert on Database Type Entity and save
     /// - Returns: Returns if the save was successful
-    func createDB(from downloadedPostalCodes: [LocalPostalCode]) -> Bool {
+    func createDB(from downloadedPostalCodes: [LocalPostalCode]) {
         
         let dbPostalCodes = downloadedPostalCodes.map { localPostalCode -> PostalCodes in
         
@@ -59,24 +59,25 @@ extension DatabaseManager {
             return newPostalCodes
         }
 
-        return createFullDB(postalCodes: dbPostalCodes)
+        createDatabase(postalCodes: dbPostalCodes)
     }
 
-    private func createFullDB(postalCodes: [PostalCodes]) -> Bool {
+    
+    /// Database creator with received postal codes
+    /// - Parameter postalCodes: postal codes to save
+    private func createDatabase(postalCodes: [PostalCodes]) {
         
-        var success: Bool = false
         self.viewContext.performAndWait {
             
             postalCodes.forEach { viewContext.insert($0) }
             
             do {
                 try self.viewContext.save()
-                success = true
+                print("Database created successfully")
             } catch {
-                success = false
+                print("Failed to create the Database")
             }
         }
-        return success
     }
 }
 
