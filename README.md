@@ -18,3 +18,4 @@ Simple app develop to download and search Portuguese Postal Codes.
  - Some approached would be used on a production project, like:
      - Programmatically developing the UI
      - More realistic network layer
+     - The viewModel / repository was built with this approach to allow more flexibility for unit tests. However the dependencies would be changed, to avoid to affect database values while performing the unit tests
