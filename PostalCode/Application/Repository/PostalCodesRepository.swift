@@ -7,55 +7,58 @@
 
 import Foundation
 
-protocol PostalCodesRepositoryUseCase {
-    
-    func fetchPostalCodes() -> [PostalCode]?
-    func search(for searchTerm: String) -> [PostalCode]
-}
-
-
-struct PostalCodesRepository: PostalCodesRepositoryUseCase {
+struct PostalCodesRepository {
     
     private var service: PostalCodesService
-    private var database: DBStorage?
-    
+    private var database = DatabaseManager()
     
     init(service: PostalCodesService) {
         self.service = service
-        self.database = DBStorage()
     }
     
-    func fetchPostalCodes() -> [PostalCode]? {
+    /// This function will fetch all the saved postal codes
+    /// - Returns: Array of saved postal codes
+    func fetchPostalCodes() -> [PostalCodes]? {
+        
         print("Check fetchPostalCodes on repository")
-        guard
-            let database = database,
-            let postalCodes = database.fetchPostalCodes()
-        else {
-            downloadPostalCodes()
+        
+        let savedPostalCodes = database.fetchAllPostalCodes()
+
+        if savedPostalCodes.isEmpty {
             return nil
         }
         
-        return postalCodes
+        return savedPostalCodes
     }
     
-    func search(for searchTerm: String) -> [PostalCode] {
-        []
+    /// Function thar starts the filtering process
+    /// - Parameters:
+    ///   - text: Text to filter
+    ///   - completed: filtered Postal Codes
+    func filterBy(text: String, completed: @escaping ([PostalCodes]?) -> Void) {
+ 
+        database.filterPostalCodes(with: text, completion: { codes in
+            completed(codes)
+        })
     }
     
-    
-    func downloadPostalCodes() {
+    /// Function that downloads and saves the downloaded Postal Codes
+    func downloadPostalCodes(completion: @escaping (Result<Void, Error>) -> ()) {
+        
         print("Start downloadPostalCodes")
         
         Task {
-            let postalCodes = await service.getPostalCodes()
+            let postalCodes = await service.downloadPostalCodes()
             
             switch postalCodes {
             case .success(let downloadedPostalCodes):
-                database?.save(downloadedPostalCodes)
+    
+                database.createDB(from: downloadedPostalCodes)
+                completion(.success(()))
                 
             case .failure(let error):
-                print("error")
-                break
+                
+                completion(.failure(error))
             }
         }
     }
